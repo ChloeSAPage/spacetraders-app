@@ -1,21 +1,13 @@
 import { useState } from "react";
 // import { register } from "./assets/api.js";
 import { mockRegister } from "./assets/mockAPI.js";
-import InfoCard from "./components/InfoCard/InfoCard.js";
 
 /**
  * This component is a basic MVP of part one of the quickstart. It handles registering your agent and receives a token
  * which you will need to use in subsequent calls. Therefore, you might want to refactor or replace this as you move forward.
  */
 
-function NewGame({
-    token,
-    setToken,
-    resp,
-    setResp,
-    isAgentCreated,
-    setIsAgentCreated,
-}: any) {
+function NewGame({ setToken, setResp, setIsAgentCreated }: any) {
     const [form, setForm] = useState({ symbol: "", faction: "COSMIC" });
 
     return (
@@ -47,11 +39,6 @@ function NewGame({
                     }
                 }}
             />
-
-            <pre>API token: {token}</pre>
-            <pre>Response: {JSON.stringify(resp, null, 2)}</pre>
-
-            {isAgentCreated && resp && <InfoCard resp={resp.data} />}
         </>
     );
 }

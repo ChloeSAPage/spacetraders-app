@@ -7,3 +7,8 @@ export async function mockRegister() {
         body: json,
     };
 }
+
+export async function mockGetCurrentLocation() {
+    return {
+    };
+}
