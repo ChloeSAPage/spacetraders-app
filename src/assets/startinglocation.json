@@ -1,0 +1,60 @@
+{
+    "data": {
+        "systemSymbol": "X1-N57",
+        "symbol": "X1-N57-A1",
+        "type": "PLANET",
+        "x": -11,
+        "y": 23,
+
+        "orbitals": [
+            {
+                "symbol": "X1-N57-A3"
+            },
+            {
+                "symbol": "X1-N57-A2"
+            },
+            {
+                "symbol": "X1-N57-A4"
+            }
+        ],
+
+        "traits": [
+            {
+                "symbol": "VOLCANIC",
+                "name": "Volcanic",
+                "description": "A volatile world marked by intense volcanic activity, creating a hazardous environment with the potential for valuable resource extraction, such as rare metals and geothermal energy."
+            },
+            {
+                "symbol": "SPRAWLING_CITIES",
+                "name": "Sprawling Cities",
+                "description": "Expansive urban centers that stretch across the landscape, boasting advanced infrastructure and diverse populations."
+            },
+            {
+                "symbol": "DRY_SEABEDS",
+                "name": "Dry Seabeds",
+                "description": "Vast, desolate landscapes that once held oceans, now exposing the remnants of ancient marine life and providing opportunities for the discovery of valuable resources."
+            },
+            {
+                "symbol": "FOSSILS",
+                "name": "Fossils",
+                "description": "A waypoint rich in the remains of ancient life, offering a valuable window into the past and the potential for scientific discovery."
+            },
+            {
+                "symbol": "MARKETPLACE",
+                "name": "Marketplace",
+                "description": "A thriving center of commerce where traders from across the galaxy gather to buy, sell, and exchange goods."
+            }
+        ],
+        "modifiers": [],
+
+        "chart": {
+            "submittedBy": "COSMIC",
+            "submittedOn": "2024-09-01T16:04:17.349Z"
+        },
+
+        "faction": {
+            "symbol": "COSMIC"
+        },
+        "isUnderConstruction": false
+    }
+}
