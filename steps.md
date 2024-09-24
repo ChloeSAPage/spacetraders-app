@@ -16,17 +16,17 @@ could add a favicon but i cba
 
 move given anonymous function into a new function called register. Need to return the ok response from fetch, as well as the body.
 
+5. Mock API call
 
+Using a previous response, create a mock API function which returns a response from a json file.
 
-
-5. Render information from request
+6. Render information from request
 
 Create new components that are conditionally rendered which contain information needed.
 
 NewGame will be the top level component, I could make app the top level component but I'm unsure if that is correct.
 
-
-6. Find starting location
+7. Find starting location
 
 I'm thinking this should be a new view, so maybe incorporate react-router.
 
