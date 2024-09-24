@@ -8,11 +8,15 @@ import InfoCard from "./components/InfoCard/InfoCard.js";
  * which you will need to use in subsequent calls. Therefore, you might want to refactor or replace this as you move forward.
  */
 
-function NewGame() {
-    const [token, setToken] = useState();
-    const [resp, setResp] = useState();
+function NewGame({
+    token,
+    setToken,
+    resp,
+    setResp,
+    isAgentCreated,
+    setIsAgentCreated,
+}: any) {
     const [form, setForm] = useState({ symbol: "", faction: "COSMIC" });
-    const [isAgentCreated, setIsAgentCreated] = useState(false);
 
     return (
         <>
