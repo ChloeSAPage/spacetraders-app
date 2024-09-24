@@ -1,6 +1,7 @@
-import json from "./response.json"
+// @ts-ignore
+import json from "./response.json";
 
-export async function mockRegister(symbol, faction) {
+export async function mockRegister() {
     return {
         ok: "ok",
         body: json,

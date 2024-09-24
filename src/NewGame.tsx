@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import { register } from "./assets/api.js";
 import { mockRegister } from "./assets/mockAPI.js";
+import InfoCard from "./components/InfoCard/InfoCard.js";
 
 /**
  * This component is a basic MVP of part one of the quickstart. It handles registering your agent and receives a token
@@ -45,6 +46,8 @@ function NewGame() {
 
             <pre>API token: {token}</pre>
             <pre>Response: {JSON.stringify(resp, null, 2)}</pre>
+
+            {isAgentCreated && resp && <InfoCard resp={resp.data} />}
         </>
     );
 }
