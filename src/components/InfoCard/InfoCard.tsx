@@ -10,15 +10,14 @@ function InfoCard({ resp }: any) {
             <p>Credits: {agent.credits}</p>
             <p>Faction: {faction.symbol}</p>
             <p>Faction Description: {faction.description}</p>
-            <p>
-                Traits:{" "}
-                {faction.traits.map((trait: any) => (
-                    <div>
-                        <li>{trait.symbol}</li>
-                        <p>{trait.description}</p>
-                    </div>
+            <p>Traits:</p>
+            <ul>
+                {faction.traits.map((trait: any, index: any) => (
+                    <li key={index}>
+                        <strong>{trait.symbol}</strong>: {trait.description}
+                    </li>
                 ))}
-            </p>
+            </ul>
         </>
     );
 }
