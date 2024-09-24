@@ -1,6 +1,5 @@
 import { useState } from "react";
-// import { register } from "./assets/api.js";
-import { mockRegister } from "./assets/mockAPI.js";
+import { register } from "./assets/api.js";
 
 /**
  * This component is a basic MVP of part one of the quickstart. It handles registering your agent and receives a token
@@ -30,7 +29,7 @@ function NewGame({ setToken, setResp, setIsAgentCreated }: any) {
             <input
                 type="submit"
                 onClick={async () => {
-                    const json = await mockRegister(form.symbol, form.faction);
+                    const json = await register(form.symbol, form.faction);
 
                     if (json.ok) {
                         setToken(json.body.data.token);
