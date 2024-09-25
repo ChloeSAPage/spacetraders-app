@@ -2,6 +2,7 @@ import "./App.css";
 import NewGame from "./NewGame";
 import { useState } from "react";
 import InfoCard from "./components/InfoCard/InfoCard";
+import CurrentLocation from "./components/CurrentLocation/CurrentLocation";
 
 function App() {
     const [token, setToken] = useState();
@@ -22,6 +23,10 @@ function App() {
             )}
 
             {isAgentCreated && resp && <InfoCard resp={resp.data} />}
+
+            {isAgentCreated && resp && (
+                <CurrentLocation token={token} info={resp.data} />
+            )}
         </>
     );
 }

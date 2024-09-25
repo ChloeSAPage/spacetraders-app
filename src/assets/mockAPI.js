@@ -1,5 +1,6 @@
 // @ts-ignore
 import json from "./response.json";
+import startingLocation from "./startinglocation.json";
 
 export async function mockRegister() {
     return {
@@ -8,7 +9,9 @@ export async function mockRegister() {
     };
 }
 
-export async function mockGetCurrentLocation() {
+export async function mockGetStartingLocation() {
     return {
+        ok: "ok",
+        body: startingLocation,
     };
 }
