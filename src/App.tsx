@@ -6,7 +6,7 @@ import CurrentLocation from "./components/CurrentLocation/CurrentLocation";
 
 function App() {
     const [token, setToken] = useState();
-    const [resp, setResp] = useState();
+    const [resp, setResp] = useState({ data: "" });
     const [isAgentCreated, setIsAgentCreated] = useState(false);
 
     return (

@@ -6,11 +6,13 @@ import LocationInfo from "../LocationInfo/LocationInfo";
 function GetCurrentLocation({ token, info }: any) {
     const nav_info = info.ship.nav;
 
-    const [waypoint, setWaypoint] = useState();
+    const [waypoint, setWaypoint] = useState({ data: "" });
+    const [isRendered, setIsRendered] = useState(false);
+    const [error, setError] = useState("");
 
     return (
         <>
-            {!waypoint && (
+            {!isRendered && (
                 <button
                     onClick={async () => {
                         const json = await getStartingLocation(
@@ -21,14 +23,17 @@ function GetCurrentLocation({ token, info }: any) {
 
                         if (json.ok) {
                             setWaypoint(json.body);
+                            setIsRendered(true);
+                        } else {
+                            setError("An error has occurred");
                         }
                     }}
                 >
                     Get Waypoint
                 </button>
             )}
-
-            {waypoint && <LocationInfo waypoint={waypoint.data} />}
+            {error && <p>{error}</p>}
+            {isRendered && <LocationInfo waypoint={waypoint.data} />}
         </>
     );
 }

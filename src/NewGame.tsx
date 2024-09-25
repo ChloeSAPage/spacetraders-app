@@ -7,7 +7,7 @@ import { register } from "./assets/api.js";
  * which you will need to use in subsequent calls. Therefore, you might want to refactor or replace this as you move forward.
  */
 
-function NewGame({ setToken, resp, setResp, setIsAgentCreated }: any) {
+function NewGame({ setToken, setResp, setIsAgentCreated }: any) {
     const [form, setForm] = useState({ symbol: "", faction: "COSMIC" });
     const [error, setError] = useState("");
 
