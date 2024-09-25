@@ -35,3 +35,5 @@ Lift the state up so we can pass the token into other components.
 1. Better error handling
 
 Errors should be handled according to the HTTP response (404, 401, 418 etc.)
+
+2. Better testing and mocking
