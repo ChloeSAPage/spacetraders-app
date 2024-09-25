@@ -1,4 +1,7 @@
-export async function register(symbol, faction) {
+export async function register(
+    symbol: string,
+    faction: string
+): Promise<{ ok: boolean; body: any }> {
     const resp = await fetch("https://api.spacetraders.io/v2/register", {
         method: "POST",
         headers: {
@@ -18,7 +21,11 @@ export async function register(symbol, faction) {
     };
 }
 
-export async function getStartingLocation(token, systemSymbol, waypointSymbol) {
+export async function getStartingLocation(
+    token: string,
+    systemSymbol: string,
+    waypointSymbol: string
+): Promise<{ ok: boolean; body: any }> {
     const resp = await fetch(
         `https://api.spacetraders.io/v2/systems/${systemSymbol}/waypoints/${waypointSymbol}`,
         {
