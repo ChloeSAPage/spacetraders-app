@@ -47,16 +47,22 @@ Lift the state up so we can pass the token into other components.
 
 # Improvements
 
-1. Better error handling
+1. Better use of the type system
+
+Define types for props and API response instead of using any
+
+2. Better error handling
 
 Errors should be handled according to the HTTP response (404, 401, 418 etc.)
 
-2. Testing and mocking
+3. Testing and mocking
 
-3. Better use of the type system
+Write tests
 
 # What I learnt
 
 1. async functions need to return `Promise<T>`
 
 2. You can type props in react
+
+3. That you can make custom types in typescript
