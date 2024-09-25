@@ -7,10 +7,18 @@ function InfoCard({ resp }: any) {
     return (
         <>
             <h1 className={styles.title}>{agent.symbol}</h1>
-            <p>Credits: {agent.credits}</p>
-            <p>Faction: {faction.symbol}</p>
-            <p>Faction Description: {faction.description}</p>
-            <p>Traits:</p>
+            <p>
+                <strong>Credits:</strong> {agent.credits}
+            </p>
+            <p>
+                <strong>Faction:</strong> {faction.symbol}
+            </p>
+            <p>
+                <strong>Faction Description:</strong> {faction.description}
+            </p>
+            <p>
+                <strong>Traits:</strong>
+            </p>
             <ul>
                 {faction.traits.map((trait: any, index: any) => (
                     <li key={index}>
