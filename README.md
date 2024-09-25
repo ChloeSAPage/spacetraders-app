@@ -25,9 +25,7 @@ Add rule to Github repo to prevent commits to main and require PR.
 
 Make a request to the register endpoint, store the response and token in state.
 
-3. Change page title
-
-could add a favicon but i cba
+3. Change page title and favicon
 
 4. Move api calls into 1 file
 
@@ -53,9 +51,9 @@ Lift the state up so we can pass the token into other components.
 
 Errors should be handled according to the HTTP response (404, 401, 418 etc.)
 
-2. Better testing and mocking
+2. Testing and mocking
 
-3. Better typing
+3. Better use of the type system
 
 # What I learnt
 
