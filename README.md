@@ -1,26 +1,8 @@
-# STQS
+# Spacetraders
 
-## Goal
-Your goal is to visit [SpaceTraders.io](https://docs.spacetraders.io/quickstart/new-game) and implement as many features from the quickstart as you feel able to.
+Web app built using React, TypeScript and the [SpaceTraders.io](https://docs.spacetraders.io/quickstart/new-game) API.
 
-> SpaceTraders is a fun, free game driven entirely through API interactions. It is not affiliated with us in any way, so please ensure you abide by their [rate limits](https://docs.spacetraders.io/api-guide/rate-limits).
-## Delivery
-We have scaffolded a small project (this repo) to get you started. It contains everything you need to run and work on your quickstart. We will be running it when we receive your submission, so please ensure it works and contains any additional information we need to run it.
-
-On completion, return the repository to us, either zipped as an attachment or uploaded to a Git hosting service.
-
-## Tips
-We suggest focusing on a quality **vertical slice**, rather than lots of functionality. Consider this an opportunity to show us how you might approach building an application, which you will then have the chance to walk us through later. You do not need to build a large application - focus on demonstrating experience over feature completion.
-
-Areas we will be looking to discuss include:
-- How you structure your code
-- Idiomatic use of React and ECMAScript
-- How you use the type system to build confidence in your code
-- Performance considerations when dealing with side effects and state
-- How styling is organized and applied (we don't expect you to be a designer, so don't worry about aesthetic choices)
-- How you use source code management (Git) to segment your changes
-
-We have implemented the very first part of the quickstart here to get you moving (see `NewGame.tsx`), but how you structure things (and how you present the user interface) is entirely up to you.
+> SpaceTraders is a fun, free game driven entirely through API interactions.
 
 ## Requirements
 
@@ -33,6 +15,50 @@ NPM
 `npm run dev`
 See `package.json` for more details on available scripts.
 
-## Exercise
+## Steps taken and thought processes
 
-Run the project (or read `./src/App.tsx`) for details of the exercise.
+1. Initial Commit and Repo rules
+
+Add rule to Github repo to prevent commits to main and require PR.
+
+2. Read and understand code
+
+Make a request to the register endpoint, store the response and token in state.
+
+3. Change page title
+
+could add a favicon but i cba
+
+4. Move api calls into 1 file
+
+move given anonymous function into a new function called register. Need to return the ok response from fetch, as well as the body.
+
+5. Mock API call
+
+Using a previous response, create a mock API function which returns a response from a json file.
+
+6. Render information from request
+
+Create new components that are conditionally rendered which contain information needed.
+
+7. Move state into app.jsx
+
+Lift the state up so we can pass the token into other components.
+
+7. Find starting location
+
+# Improvements
+
+1. Better error handling
+
+Errors should be handled according to the HTTP response (404, 401, 418 etc.)
+
+2. Better testing and mocking
+
+3. Better typing
+
+# What I learnt
+
+1. async functions need to return `Promise<T>`
+
+2. You can type props in react

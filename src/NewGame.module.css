@@ -1,0 +1,20 @@
+.title {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input, .submit {
+    height: 2rem;
+    border-radius: 10px;
+}
+
+.submit:hover {
+    background-color: var(--yellow);
+    color: black;
+    cursor: pointer;
+}

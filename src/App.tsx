@@ -13,11 +13,8 @@ function App() {
         <>
             {!isAgentCreated && (
                 <NewGame
-                    token={token}
                     setToken={setToken}
-                    resp={resp}
                     setResp={setResp}
-                    isAgentCreated={isAgentCreated}
                     setIsAgentCreated={setIsAgentCreated}
                 />
             )}
