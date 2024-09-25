@@ -9,7 +9,7 @@ function NewGame({ setToken, setResp, setIsAgentCreated }: any) {
 
     return (
         <>
-            <h1 className={styles.title}>Create an Agent</h1>
+            <h1 className={styles.title}>New Game</h1>
             <div className={styles.form}>
                 <input
                     className={styles.input}
