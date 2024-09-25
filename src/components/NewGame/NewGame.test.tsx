@@ -4,11 +4,11 @@ import NewGame from "./NewGame";
 
 it("renders", async () => {
     // Arrange
-    render(<NewGame />)
+    render(<NewGame />);
 
     // Act
     await screen.findByRole("heading");
 
     // Assert
     expect(screen.getByRole("heading")).toHaveTextContent("New Game");
-})
+});

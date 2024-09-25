@@ -1,5 +1,5 @@
 import "./App.css";
-import NewGame from "./NewGame";
+import NewGame from "./components/NewGame/NewGame";
 import { useState } from "react";
 import InfoCard from "./components/InfoCard/InfoCard";
 import CurrentLocation from "./components/CurrentLocation/CurrentLocation";
