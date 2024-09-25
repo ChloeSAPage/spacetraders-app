@@ -10,5 +10,5 @@ it("renders", async () => {
     await screen.findByRole("heading");
 
     // Assert
-    expect(screen.getByRole("heading")).toHaveTextContent("New Game");
+    expect(screen.getByRole("heading")).toHaveTextContent("Create an Agent");
 });
