@@ -30,4 +30,8 @@ Lift the state up so we can pass the token into other components.
 
 7. Find starting location
 
-I'm thinking this should be a new view, so maybe incorporate react-router.
+# Improvements
+
+1. Better error handling
+
+Errors should be handled according to the HTTP response (404, 401, 418 etc.)
