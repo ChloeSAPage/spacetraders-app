@@ -1,7 +1,7 @@
 import styles from "./NewGame.module.css";
 import { useState } from "react";
-// import { register } from "../../assets/api.js";
-import { mockRegister } from "../../assets/mockAPI.js";
+import { register } from "../../assets/api.js";
+// import { mockRegister } from "../../assets/mockAPI.js";
 
 function NewGame({ setToken, setResp, setIsAgentCreated }: any) {
     const [form, setForm] = useState({ symbol: "", faction: "COSMIC" });
@@ -31,7 +31,7 @@ function NewGame({ setToken, setResp, setIsAgentCreated }: any) {
                     className={styles.submit}
                     type="submit"
                     onClick={async () => {
-                        const json = await mockRegister(
+                        const json = await register(
                             form.symbol,
                             form.faction
                         );

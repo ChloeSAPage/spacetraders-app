@@ -1,7 +1,7 @@
 import styles from "./InfoCard.module.css";
 import { ApiResponse } from "../../types/response.interface";
 
-function InfoCard({ resp }: { resp: ApiResponse['data'] }) {
+function InfoCard({ resp }: { resp: ApiResponse["data"] }) {
     const agent = resp.agent;
     const faction = resp.faction;
 

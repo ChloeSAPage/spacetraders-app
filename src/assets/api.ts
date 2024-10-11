@@ -1,8 +1,17 @@
-export async function register(
-    symbol: string,
-    faction: string
-): Promise<{ ok: boolean; body: any }> {
-    const resp = await fetch("https://api.spacetraders.io/v2/register", {
+const requestWrapper = async (path: string, options: any) => {
+    const API_URL = "https://api.spacetraders.io/v2/";
+    const resp = await fetch(`${API_URL}/${path}`, options);
+
+    const json = await resp.json();
+
+    return {
+        ok: resp.ok,
+        body: json,
+    };
+};
+
+export async function register(symbol: string, faction: string) {
+    return requestWrapper("register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -12,22 +21,15 @@ export async function register(
             faction: faction,
         }),
     });
-
-    const json = await resp.json();
-
-    return {
-        ok: resp.ok,
-        body: json,
-    };
 }
 
 export async function getStartingLocation(
     token: string,
     systemSymbol: string,
     waypointSymbol: string
-): Promise<{ ok: boolean; body: any }> {
-    const resp = await fetch(
-        `https://api.spacetraders.io/v2/systems/${systemSymbol}/waypoints/${waypointSymbol}`,
+) {
+    return requestWrapper(
+        `systems/${systemSymbol}/waypoints/${waypointSymbol}`,
         {
             headers: {
                 "Content-Type": "application/json",
@@ -35,11 +37,4 @@ export async function getStartingLocation(
             },
         }
     );
-
-    const json = await resp.json();
-
-    return {
-        ok: resp.ok,
-        body: json,
-    };
 }

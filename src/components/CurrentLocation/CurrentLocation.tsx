@@ -1,7 +1,7 @@
 import { useState } from "react";
-// import { getStartingLocation } from "../../assets/api.js";
-import { mockGetStartingLocation } from "../../assets/mockAPI.js";
-import LocationInfo from "../LocationInfo/LocationInfo";
+import { getStartingLocation } from "../../assets/api.js";
+// import { mockGetStartingLocation } from "../../assets/mockAPI.js";
+import LocationInfo from "../LocationInfo/LocationInfo.js";
 import { ApiResponse } from "../../types/response.interface.js";
 
 interface CurrentLocationProps {
@@ -21,7 +21,7 @@ function GetCurrentLocation({ token, info }: CurrentLocationProps) {
             {!isRendered && (
                 <button
                     onClick={async () => {
-                        const json = await mockGetStartingLocation(
+                        const json = await getStartingLocation(
                             token,
                             nav_info.systemSymbol,
                             nav_info.waypointSymbol

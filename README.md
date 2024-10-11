@@ -43,7 +43,13 @@ Create new components that are conditionally rendered which contain information 
 
 Lift the state up so we can pass the token into other components.
 
-7. Find starting location
+8. Find starting location
+
+9. Improve type safety
+
+Created custom interface for api response.
+
+10. Refactor api.js to reduce repeated code.
 
 # Improvements
 
