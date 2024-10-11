@@ -1,4 +1,13 @@
-const requestWrapper = async (path: string, options: any) => {
+interface Options {
+    method?: string;
+    headers: {
+        "Content-Type": string;
+        Authorization?: string;
+    };
+    body?: string;
+}
+
+const requestWrapper = async (path: string, options: Options) => {
     const API_URL = "https://api.spacetraders.io/v2/";
     const resp = await fetch(`${API_URL}/${path}`, options);
 
